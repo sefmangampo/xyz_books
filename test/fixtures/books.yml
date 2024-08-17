@@ -4,7 +4,7 @@ one:
   title: MyString
   isbn_13: MyString
   price: 9.99
-  publication: MyString
+  isbn_10: MyString
   year: 1
   publisher: one
 
@@ -12,6 +12,6 @@ two:
   title: MyString
   isbn_13: MyString
   price: 9.99
-  publication: MyString
+  isbn_10: MyString
   year: 1
   publisher: two
