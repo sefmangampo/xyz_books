@@ -1,3 +1,4 @@
+
 class Book < ApplicationRecord
   belongs_to :publisher
   has_and_belongs_to_many :authors
@@ -58,6 +59,8 @@ class Book < ApplicationRecord
     return false unless isbn.length == 13
     return false unless isbn =~ /\A\d{13}\z/
 
+    puts "------here-----#{isbn}"
+
     # Convert to array of digits
     digits = isbn.chars.map(&:to_i)
 
@@ -69,7 +72,7 @@ class Book < ApplicationRecord
 
     # Calculate the expected check digit
     expected_check_digit = (10 - (total_sum % 10)) % 10
-
+    puts "----#{digits.last}------#{expected_check_digit}"
     # Compare the expected check digit with the actual check digit
     digits.last == expected_check_digit
   end

@@ -34,6 +34,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_08_17_044214) do
     t.decimal "price"
     t.integer "year"
     t.string "edition"
+    t.string "image"
     t.integer "publisher_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

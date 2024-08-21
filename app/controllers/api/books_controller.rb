@@ -106,6 +106,8 @@ module Api
         isbn_10: book.isbn_10,
         price: book.price,
         year: book.year,
+        edition: book.edition,
+        image: book.image,
         publisher: {
           id: book.publisher.id,
           name: book.publisher.name
