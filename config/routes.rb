@@ -10,8 +10,9 @@ Rails.application.routes.draw do
 
    resources :books, only: [ :index, :show, :create, :update, :destroy ] do
       collection do
-        get "search"
-        get "validate_isbn"
+        get :search
+        get :validate_isbn
+        get :convert
       end
     end
   end
